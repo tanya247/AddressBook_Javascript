@@ -85,8 +85,8 @@ class AddressBook{
 }
 let addressBookArrays = new Array();
 try{
-     addressBookArrays.push(new AddressBook("Tanya", "Kansal", "Chandi Road", "Hapur","UttarPradesh", "8947859647", "tanya@gmail.com",245782));
-     addressBookArrays.push(new AddressBook("Prashant","Rathore","Kannauj","Kanpur","UttarPradesh","8745962578","prashantk@gmail.com",245874));
+     addressBookArrays.push(new AddressBook("Tanya", "Kansal", "Chandi Road", "Hapur","Uttar_Pradesh", "89478596447", "tanya@gmail.com",24578));
+     addressBookArrays.push(new AddressBook("Prashant","Rathore","Kannauj","Kanpur","Uttar_Pradesh","8745962578","prashantk@gmail.com",245874));
      console.log(addressBookArrays);
 }catch(e){
     console.log(e);

@@ -90,6 +90,9 @@ try{
      console.log(addressBookArrays);
      searchByNameAndEdit("Prashant","Pranshu");
      console.log(addressBookArrays);
+     searchByNameAndDelete("Tanya");
+     console.log("AddressBook After Addition and Deletion");
+     console.log(addressBookArrays);
 
 }catch(e){
     console.log(e);
@@ -105,4 +108,14 @@ function searchByNameAndEdit(firstName,newName)
               
     }
 }
-searchByNameAndEdit("Prashant","Pranshu")
+function searchByNameAndDelete(firstname)
+{
+    for(contact of addressBookArrays){
+        if(contact.firstname == firstname)
+        {
+            addressBookArrays.pop(contact)
+        }  
+    }
+}
+
+

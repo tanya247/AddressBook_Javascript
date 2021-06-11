@@ -93,6 +93,7 @@ try{
      searchByNameAndDelete("Tanya");
      console.log("AddressBook After Addition and Deletion");
      console.log(addressBookArrays);
+     getCount();
 
 }catch(e){
     console.log(e);
@@ -116,6 +117,13 @@ function searchByNameAndDelete(firstname)
             addressBookArrays.pop(contact)
         }  
     }
+}
+function count(contactCount){
+    return ++contactCount;
+}
+
+function getCount(){
+    console.log("Contacts : "+addressBookArrays.reduce(count,0)+"\n");
 }
 
 

@@ -96,6 +96,8 @@ try{
      getCount();
      checkDuplicateConatct("Tanya");
      searchContactByCitAndState("Tanya","Hapur","UttarPradesh");
+     viewByCity("Hapur");
+     viewByState("UttarPradesh");
 
 }catch(e){
     console.log(e);
@@ -151,5 +153,13 @@ function searchContactByCitAndState(firstname,city,state){
         console.log(" Contact not Match! Please give proper city and state");
     }
 
+}
+
+function viewByCity(city){
+    addressBookArrays.filter(contact=>contact.city==city).forEach(contact=>console.log(contact))
+}
+
+function viewByState(state){
+    addressBookArrays.filter(contact=>contact.state==state).forEach(contact=>console.log(contact))
 }
 

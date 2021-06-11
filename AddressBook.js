@@ -95,6 +95,7 @@ try{
      console.log(addressBookArrays);
      getCount();
      checkDuplicateConatct("Tanya");
+     searchContactByCitAndState("Tanya","Hapur","UttarPradesh");
 
 }catch(e){
     console.log(e);
@@ -127,7 +128,7 @@ function getCount(){
     console.log("Contacts : "+addressBookArrays.reduce(count,0)+"\n");
 }
 function checkDuplicateConatct(firstname)
-    {
+{
         console.log("New Name: "+firstname);
         let d =  addressBookArrays.filter(contact=>contact.firstname==firstname )
                                  .map(contact => contact.firstName.toString() )
@@ -137,5 +138,18 @@ function checkDuplicateConatct(firstname)
               }
               else
               console.log(firstname + " "+"Doesnt Exist \n   You can create a AddressBook by Using "+firstname)
+}
+function searchContactByCitAndState(firstname,city,state){
+    let citySearch=addressBookArrays.filter(contacts => contacts.firstname == firstname && contacts.city == city).toString();
+    let stateSearch=addressBookArrays.filter(contacts => contacts.firstname == firstname && contacts.state == state).toString();
+    
+    if (citySearch.length >0 && stateSearch.length >0){
+       
+        console.log("Contact Match "+firstname);
+        
+    }else{
+        console.log(" Contact not Match! Please give proper city and state");
     }
+
+}
 
